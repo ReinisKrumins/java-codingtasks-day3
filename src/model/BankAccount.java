@@ -38,9 +38,10 @@ public class BankAccount {
     public double deposit(double amount)
     {
         if(amount > MAX_DEPOSIT_AMOUNT){
-            System.out.println("Transaction cancelled. " +
-                    "Max deposit: 5000 | " +
-                    "Your deposit:" + amount);
+            System.out.println("Account with ID:" + getAccountId() +
+                    " Transaction cancelled." +
+                    " Max deposit: 5000 |" +
+                    " Your deposit:" + amount);
         }
         else {
             double newAmount = balance + amount;
@@ -52,13 +53,14 @@ public class BankAccount {
     public double withdraw(double amount)
     {
         if(amount > balance) {
-            System.out.println("Account with ID:" + getAccountId() + " has insufficient balance");
+            System.out.println("Account ID:" + getAccountId() +
+                    " has insufficient balance " +
+                    " Balance: " + balance);
         }
         else {
             double newAmount = balance - amount;
             balance = newAmount;
         }
-
         return balance;
     }
 
