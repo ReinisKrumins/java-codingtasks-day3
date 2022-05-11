@@ -16,7 +16,6 @@ public class MainBankService {
         allAccounts.add(bankAcc);
         allAccounts.add(bankAcc2);
         allAccounts.add(bankAcc3);
-        allAccounts.add(bankAcc4);
 
         System.out.println("*All bank accounts*");
         for(BankAccount tempBA: allAccounts)

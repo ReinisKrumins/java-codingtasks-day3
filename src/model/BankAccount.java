@@ -44,8 +44,7 @@ public class BankAccount {
                     " Your deposit:" + amount);
         }
         else {
-            double newAmount = balance + amount;
-            balance = newAmount;
+            balance += amount;
         }
 
         return balance;
@@ -58,12 +57,10 @@ public class BankAccount {
                     " Balance: " + balance);
         }
         else {
-            double newAmount = balance - amount;
-            balance = newAmount;
+            balance -= amount;
         }
         return balance;
     }
-
     @Override
     public String toString() {
         return "BankAccount{" + "ID:" + getAccountId() + " balance=" + balance + '}';
