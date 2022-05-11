@@ -27,7 +27,7 @@ public class MainCarService {
         System.out.println(minivanOne.toString());
 
         System.out.println(minivanOne.toString());
-        steering(minivanOne, "Straight");
+        steering(minivanOne, "Right");
         System.out.println(minivanOne.toString());
         changingGears(minivanOne, "2");
         System.out.println(minivanOne.toString());
