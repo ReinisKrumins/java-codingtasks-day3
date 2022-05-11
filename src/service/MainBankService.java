@@ -4,7 +4,7 @@ import model.BankAccount;
 
 import java.util.ArrayList;
 
-public class Main {
+public class MainBankService {
 
     private static ArrayList<BankAccount> allAccounts = new ArrayList<>();
     public static void main(String[] args) {
