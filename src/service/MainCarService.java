@@ -21,9 +21,9 @@ public class MainCarService {
         changingGears(minivanOne, "N");
         changingGears(minivanOne, "1");
         System.out.println(minivanOne.toString());
-        increaseSpeed(minivanOne, 210);
+        changeSpeed(minivanOne, 210);
         System.out.println(minivanOne.toString());
-        increaseSpeed(minivanOne, 20);
+        changeSpeed(minivanOne, 20);
         System.out.println(minivanOne.toString());
 
         System.out.println(minivanOne.toString());
@@ -31,7 +31,7 @@ public class MainCarService {
         System.out.println(minivanOne.toString());
         changingGears(minivanOne, "2");
         System.out.println(minivanOne.toString());
-        increaseSpeed(minivanOne, 30);
+        changeSpeed(minivanOne, 30);
         System.out.println(minivanOne.toString());
 
     }
@@ -51,7 +51,7 @@ public class MainCarService {
             m.setGears(gear);
         }
     }
-    public static void increaseSpeed(Minivan m, int amount){
+    public static void changeSpeed(Minivan m, int amount){
         if(amount == m.getSpeed()){
             System.out.println("*It's your current speed*");
         }else{
