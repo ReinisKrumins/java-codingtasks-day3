@@ -24,25 +24,25 @@ public class TestCasesForCarService {
     public void testCarSteering()
     {
         MainCarService.steering(minivan, "Straight");
-        Assert.assertEquals(minivan.getSteer(), "Straight");
+        Assert.assertEquals("Straight", minivan.getSteer());
 
         MainCarService.steering(minivan, "Right");
-        Assert.assertEquals(minivan.getSteer(), "Right");
+        Assert.assertEquals("Right", minivan.getSteer());
     }
     @Test
     public void testCarGears()
     {
         MainCarService.changingGears(minivan, "N");
-        Assert.assertEquals(minivan.getGears(), "N");
+        Assert.assertEquals("N", minivan.getGears());
         MainCarService.changingGears(minivan, "1");
-        Assert.assertEquals(minivan.getGears(), "1");
+        Assert.assertEquals("1", minivan.getGears());
     }
     @Test
     public void testCarSpeed()
     {
         MainCarService.changeSpeed(minivan, 210);
-        Assert.assertEquals(minivan.getSpeed(), 0);
+        Assert.assertEquals(0, minivan.getSpeed());
         MainCarService.changeSpeed(minivan, 20);
-        Assert.assertEquals(minivan.getSpeed(), 20);
+        Assert.assertEquals(20, minivan.getSpeed());
     }
 }
