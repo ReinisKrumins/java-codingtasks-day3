@@ -2,52 +2,47 @@ import enums.Brand;
 import enums.Model;
 import model.Minivan;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import service.MainCarService;
 
 public class TestCasesForCarService {
+    private static Minivan minivan;
 
-    @Test
-    public void testCarSteering(){
-        Minivan minivanOne = new Minivan(2000,
+    @BeforeClass
+    public static void setUp()
+    {
+        minivan = new Minivan(2000,
                 0 ,
                 "N" ,
                 "Straight",
                 Brand.Audi,
                 Model.alpha);
+    }
 
-        MainCarService.steering(minivanOne, "Straight");
-        Assert.assertEquals(minivanOne.getSteer(), "Straight");
+    @Test
+    public void testCarSteering()
+    {
+        MainCarService.steering(minivan, "Straight");
+        Assert.assertEquals(minivan.getSteer(), "Straight");
 
-        MainCarService.steering(minivanOne, "Right");
-        Assert.assertEquals(minivanOne.getSteer(), "Right");
+        MainCarService.steering(minivan, "Right");
+        Assert.assertEquals(minivan.getSteer(), "Right");
     }
     @Test
-    public void testCarGears(){
-        Minivan minivanOne = new Minivan(2000,
-                0 ,
-                "N" ,
-                "Straight",
-                Brand.Audi,
-                Model.alpha);
-
-        MainCarService.changingGears(minivanOne, "N");
-        Assert.assertEquals(minivanOne.getGears(), "N");
-        MainCarService.changingGears(minivanOne, "1");
-        Assert.assertEquals(minivanOne.getGears(), "1");
+    public void testCarGears()
+    {
+        MainCarService.changingGears(minivan, "N");
+        Assert.assertEquals(minivan.getGears(), "N");
+        MainCarService.changingGears(minivan, "1");
+        Assert.assertEquals(minivan.getGears(), "1");
     }
     @Test
-    public void testCarSpeed(){
-        Minivan minivanOne = new Minivan(2000,
-                0 ,
-                "N" ,
-                "Straight",
-                Brand.Audi,
-                Model.alpha);
-
-        MainCarService.changeSpeed(minivanOne, 210);
-        Assert.assertEquals(minivanOne.getSpeed(), 0);
-        MainCarService.changeSpeed(minivanOne, 20);
-        Assert.assertEquals(minivanOne.getSpeed(), 20);
+    public void testCarSpeed()
+    {
+        MainCarService.changeSpeed(minivan, 210);
+        Assert.assertEquals(minivan.getSpeed(), 0);
+        MainCarService.changeSpeed(minivan, 20);
+        Assert.assertEquals(minivan.getSpeed(), 20);
     }
 }
